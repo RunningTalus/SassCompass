@@ -1,0 +1,21 @@
+/*
+ul.nav { float: right }
+ul.nav li { float: left }
+ul.nav li a { color: #111 }
+ul.nav li.current { font-weight: bold }
+*/
+
+
+ul.nav {
+  float: right;
+
+  li {
+    float: left;
+    a {
+      color: #111;
+    }
+    &.current {          // & is a parent selector, &.current evaluates to li.current
+      font-weight: bold;
+    }
+  }
+}
