@@ -1,0 +1,41 @@
+@mixin horizontal-list($spacing: 10px) {  // $spacing is a parameter for @mixin horizontal-list, default value of 10px is passed in.
+  li {
+    float: left;
+    margin-right: $spacing;
+  }
+}
+
+#header ul.nav {
+  @include horizontal-list;
+  float: right;
+}
+
+#footer ul.nav {
+  @include horizontal-list(20px); // $spacing parameter is changed to 20px to get more spacing.
+  margin-top: 1em;
+}
+
+/*
+
+// SCSS compiles to the following CSS
+
+#header ul.nav {
+  float: right;
+}
+
+#header ul.nav li {
+    float: left;
+    margin-right: 10px;
+}
+
+#footer ul.nav {
+  margin-top: 1em;
+}
+
+#footer ul.nav li {
+    float: left;
+    margin-right: 20px;
+}
+
+
+*/
